@@ -2,13 +2,12 @@ import React, {useState} from "react";
 import Ingredients from './Ingredients'
 
 const IngredientList = (props) =>{
-
-  // const addToBurger
     return (
-        <div> 
-            {props.name} {props.color} {props.itemIndex}
-            <Ingredients /> 
-       </div>
+    <div style={{border: '3px solid red', width:'30%'}}> 
+        {props.name} 
+        <button onClick={(e)=>{{props.addItem(e,newItem)}}} >Add to burgerstack</button>
+        <Ingredients /> 
+    </div>
     )}
 
 

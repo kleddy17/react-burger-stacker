@@ -1,10 +1,19 @@
-// import React, {useState} from "react";
-
+import React, {useState} from "react";
+// import BurgerStack from './BurgerStack'
+// import Ingredients from './Ingredients'
 const BurgerPane = () =>{
-
+  
     return(
-    <div style={{display: "flex", justifyContent: "center"}}>
-    <p>BurgerPane where we put BurgerStack</p></div>
+    <div style={{ border: '3px solid green', float:"right", width:'300px', height:"900px", marginTop:'-500px'}}> 
+      {/* <BurgerStack/>
+    <Ingredients/> */}
+    
+    <p>BurgerPane where we put BurgerStack</p>
+
+    
+    </div>
+  
+  
     )
 }
 

@@ -1,27 +1,26 @@
 import React, {useState} from "react";
-
-const BurgerStack = () => {
+import BurgerPane from './BurgerPane'
+const BurgerStack= (props) => {
     return (
         <div>
             <ul>
-                {props.burger.map((item,index)=>{
-                    return(<li key={index} style={{backgroundColor:`${item.color}`}}>
-                        {item.name}
-                       
-                    </li>)
-                })}
+                {/* //each item an index */}
+                {props.burger.map((item, index)=>
+                {
+                    return(
+                        <li key={index} style= {{ backgroundColor: `${item.color}` }}>
+                        {item.name}  
+                        </li>
+                    )
+                }
+                )}
             </ul>
-            
+            <button onClick ={(event)=>{{props.clearBurger(event)}}}>Reset Burger</button>
         </div>
     )
 }
-
 export default BurgerStack
 
 
 
 
-
-
-
-export default BurgerStack

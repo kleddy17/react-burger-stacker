@@ -1,14 +1,21 @@
-import React, {useState} from "react"
+import React, {useState} from 'react'
 
-const Ingredients = (props) =>{
-    console.log(props.item)
+const Ingredients = (props) => {
+        console.log(props.items)
+    return(
+    <div>
+       <ul>
+            {props.items.map((newItem, index) =>(
+                <li key={index}> {newItem.name}
+            <button onClick= {(event)=>{{props.addItem(event, newItem)}}}>add</button>
+               </li>
+       
+            ) 
+            )}
+      </ul>
 
-return(
-    <div style ={{ display :"flex" , flexDirection: "row", justifyContent: "space-between", alignContent:"center", alignItems:"flex-end"}}>
-    <p>{props.item}</p> 
-    </div>
-    )
+    </div>  
+    ) 
 }
-
 export default Ingredients
 

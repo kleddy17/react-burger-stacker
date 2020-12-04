@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-// import BurgerStack from './BurgerStack'
-// import Ingredients from './Ingredients'
-const BurgerPane = () =>{
+import BurgerStack from './BurgerStack'
+
+const BurgerPane = (props) =>{
   
     return(
     <div style={{ border: '3px solid green', float:"right", width:'300px', height:"900px", marginTop:'-500px'}}> 
-      {/* <BurgerStack/>
-    <Ingredients/> */}
+      <BurgerStack burger={props.burger}  clearBurger={props.clearBurger}/>
+  
     
     <p>BurgerPane where we put BurgerStack</p>
 
